@@ -19,7 +19,7 @@ export default function Buttons() {
           currPage< totalPage && <button onClick={()=>{
           handelPageChange(currPage+1)
         }}>
-          Next
+          Nex
         </button>}
       
       <div>
