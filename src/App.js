@@ -3,6 +3,7 @@ import Head from "./components/Head";
 import Buttons from "./components/Buttons";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./context/Appcontext";
+import './App.css'
 export default function App() {
   const {loading,fetchData} = useContext(AppContext);
 
@@ -11,7 +12,9 @@ export default function App() {
   },[])
   return <div> 
        <Head />
-       {loading ? <div>Loading</div>:<Blogs/>}
+       <div className="cont">
+       {loading ? <div className="custom-loader"></div>:<Blogs/>}
+       </div>
       <Buttons/>
    
   </div>;

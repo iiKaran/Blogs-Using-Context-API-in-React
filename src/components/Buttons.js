@@ -4,8 +4,7 @@ import { AppContext } from '../context/Appcontext';
 export default function Buttons() {
   const {currPage,totalPage, handelPageChange} = useContext(AppContext);
   return (
-    <div>
-      
+    <div className = "button">
        { 
        currPage > 1 && <button onClick={()=>{
           handelPageChange(currPage-1)
@@ -19,7 +18,7 @@ export default function Buttons() {
           currPage< totalPage && <button onClick={()=>{
           handelPageChange(currPage+1)
         }}>
-          Nex
+          Next
         </button>}
       
       <div>
